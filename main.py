@@ -14,7 +14,7 @@ class Calculator:
     
     def run(self):
         # print methods
-        print("1: add\n2: sub (work in progress will be upgraded on next commit)")
+        print("1: add\n2: sub\n3: div (will be added on next commits)")
         
         # get choice
         choice = int(input("your choice: "))
@@ -24,6 +24,12 @@ class Calculator:
         if choice == 1:
             # do add
             self.choice_add()
+
+        #choice 2 = sub        
+
+        if choice == 2:
+          # do sub
+          self.choice_sub()
 
     def choice_add(self):
         while True:
@@ -41,6 +47,23 @@ class Calculator:
                 break
             except ValueError:
                 pass
+    def choice_sub(self):
+        while True:
+            try:
+                # get first number
+                a_value = int(input("first number: "))
+                
+                # get second number
+                b_value = int(input("second number: "))
+
+                # print result
+                print("your result: " + str(self.sub(a_value, b_value)))
+                
+                # break loop
+                break
+            except ValueError:
+                pass
+
 
     def loop(self):
         # print welcome message
